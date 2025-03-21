@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/BlogPost.astro";
+
+const content = `
+  <p>
+    O Projeto @_futebolefutsalparatodos é de caráter desportivo, educacional e
+    recreativo. Iniciou as atividades em 2017, e foi ligado a Associação CCT Em
+    Janeiro de 2023.
+  </p>
+  <p>
+    O Projeto trabalha junto ao indivíduo, à família, à comunidade, com o
+    objetivo de diminuir as vulnerabilidades, desenvolver potencialidades,
+    adquirir e fortalecer vínculos familiares e comunitários. As atividades
+    desenvolvidas pelo @_futebolefutsalparatodos permitem a comunidade agir com
+    autonomia e multiplicar as ações vivenciadas em eixos relevantes para o seu
+    desenvolvimento, como: incentivo ao esporte, com foco no atividades
+    esportivas, saúde e educação.
+  </p>
+  <p>
+    O Projeto atualmente esta beneficiando cerca de 100 alunos no distrito de
+    Taiba e adjacências, município de São Gonçalo do Amarante.
+  </p>
+  <h2>MISSÃO</h2>
+  <p>
+    Oferecer atividades esportivas e educacional para crianças, adolescentes e
+    jovens na comunidade de Taiba e adjacências, buscando o incentivo e lutando
+    pelo o direito de lazer e esporte de nossos alunos.
+  </p>
+  <h2>VISÃO</h2>
+  <p>
+    A Familia @_futebolefutsalparatodos Estimular o desenvolvimento motor
+    conjuntivo e sociocognitivo de crianças, adolescentes e jovens e assim
+    Trabalhando na Formação de Atletas.
+  </p>
+  <h2>VALORES</h2>
+  <p>
+    Acreditamos que um Trabalho serio e Com Responsabilidade irá trazer mudanças
+    em suas vidas, fazendo- os superar obstáculos.
+  </p>
+  <h2>JUSTIFICATIVA</h2>
+  <p>
+    O esporte contribui para a melhoria das relações sociais, uma vez que pode
+    unir, de uma maneira espontânea e criativa, as pessoas na comunidade. Além
+    disso, pode ser uma excelente forma de inclusão social, ao permitir
+    oportunidades iguais de participação, independente de gênero, raça ou
+    habilidade, desde que praticados de forma supervisionada e correta. O
+    Projeto amplia as possibilidades de aproveitamento na prática dessas
+    atividades, o que leva aos alunos a assimilar com mais clareza valores como
+    a moral, o respeito, a solidariedade, o trabalho em equipe, a disciplina e a
+    cidadania. Isto leva a formação de cidadãos conscientes e com comportamentos
+    adequados para a vida em sociedade.
+  </p>`
+---
+
+<Layout
+  title="Sobre o Projeto"
+  content={content}
+  slug='about'
+  created_at={new Date("February 27 2024").toString()}
+  updated_at={new Date("February 27 2024").toString()}
+  banner="/about.png"
+>
+</Layout>
