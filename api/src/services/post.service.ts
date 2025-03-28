@@ -1,11 +1,11 @@
 import { PrismaClient } from '@prisma/client';
-import { ICreateBlogInput, IUpdateBlogInput } from '../types';
+import { ICreatePostInput, IUpdatePostInput } from '../types';
 import { generateSlug } from '../utils/slug';
 
 const prisma = new PrismaClient();
 
 export class PostService {
-  async createPost(data: ICreateBlogInput, authorId: string) {
+  async createPost(data: ICreatePostInput, authorId: string) {
     const slug = generateSlug(data.title);
     return prisma.post.create({
       data: {
@@ -45,7 +45,7 @@ export class PostService {
     });
   }
 
-  async updatePost(id: string, data: IUpdateBlogInput) {
+  async updatePost(id: string, data: IUpdatePostInput) {
     const updateData = { ...data };
     if (data.title) {
       updateData.slug = generateSlug(data.title);
