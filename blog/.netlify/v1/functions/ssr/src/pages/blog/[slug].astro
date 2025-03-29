@@ -1,0 +1,25 @@
+---
+import BlogPost from "../../layouts/BlogPost.astro";
+import { getPostBySlug } from "../../services/post.service";
+import type { Post } from "../../services/post.service";
+
+export const prerender = false;
+
+const { slug } = Astro.params;
+
+if (!slug) {
+  return Astro.redirect("/404"); // Redirect to 404 if post not found
+}
+
+const post = await getPostBySlug(slug);
+
+if (!post) {
+  return Astro.redirect("/404"); // Redirect to 404 if post not found
+}
+---
+
+<BlogPost {...post}>
+  <div class="prose max-w-none">
+    {post.description}
+  </div>
+</BlogPost>

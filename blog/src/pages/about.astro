@@ -53,11 +53,13 @@ const content = `
 ---
 
 <Layout
+  id="about"
+  description="Conheça mais sobre o Projeto Futebol e Futsal Para Todos"
   title="Sobre o Projeto"
-  content={content}
   slug='about'
-  created_at={new Date("February 27 2024").toString()}
-  updated_at={new Date("February 27 2024").toString()}
-  banner="/about.png"
+  createdAt={new Date("February 27 2024")}
+  updatedAt={new Date("February 27 2024")}
+  imageUrl="/about.png"
+  set:html={content}
 >
 </Layout>
